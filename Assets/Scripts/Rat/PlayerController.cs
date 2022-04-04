@@ -4,79 +4,64 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    public float speed;
-    public float jumpForce; 
-    private float moveInput;
+    Rigidbody2D rb;
+    [SerializeField] Transform groundCheckCollider;
+    [SerializeField] LayerMask groundLayer;
 
-    private bool isGrounded;
-    public Transform feetPos;
-    public float checkRadius;
-    public LayerMask whatIsGround;
+    [SerializeField] float speed = 1;
+    [SerializeField] float jumpPower = 500;
+    [SerializeField] float groundCheckRadius = 0.2f;
 
-    private float jumpTimeCounter;
-    public float jumpTime;
-    private bool isJumping;
+    float horizontalValue;
+    [SerializeField] bool isGrounded;
+    
 
-    private bool isCrouching;
-    public Collider2D standingCollider;
+    bool isJumping = false;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
+    void Update()
+    {
+        horizontalValue = Input.GetAxisRaw("Horizontal");
+
+        if (Input.GetButtonDown("Jump"))
+            isJumping = true;
+        else if (Input.GetButtonUp("Jump"))
+            isJumping = false;
+    }
+
     void FixedUpdate()
     {
-        moveInput = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        GroundCheck();
+        Move(horizontalValue, isJumping);
+    }
 
-        if (Input.GetButtonDown("Crouch"))
+    void GroundCheck()
+    {
+        isGrounded = false;
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheckCollider.position, groundCheckRadius, groundLayer);
+        if (colliders.Length > 0)
         {
-            isCrouching = true;
-        }
-        else
-        {
-            isCrouching = false;
+            isGrounded = true;
         }
     }
 
-    void Update()
+    void Move(float dir, bool jumpFlag)
     {
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
-        //Crouch
-        if (isGrounded && isCrouching)
+        if (isGrounded && jumpFlag)
         {
-            standingCollider.enabled = false;
+            isGrounded = false;
+            jumpFlag = false;
+            rb.velocity = (new Vector2(0f, jumpPower));
         }
 
-        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
-        {
-            isJumping = true;
-            jumpTimeCounter = jumpTime;
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        }
-
-        if (Input.GetKey(KeyCode.Space) && isJumping == true)
-        {
-            if (jumpTimeCounter > 0)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                jumpTimeCounter -= Time.deltaTime;
-            }
-            else
-            {
-                isJumping = false;
-            }
-            
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            isJumping = false;
-        }
-
-
+        float xVal = dir * speed * 100 * Time.fixedDeltaTime;
+        Vector2 targetVelocity = new Vector2(xVal, rb.velocity.y);
+        rb.velocity = targetVelocity;
     }
 }
