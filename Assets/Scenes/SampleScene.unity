@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 185025967}
   - component: {fileID: 185025966}
   - component: {fileID: 185025965}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 396411199}
   - component: {fileID: 396411198}
   - component: {fileID: 396411197}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -957,11 +957,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906037801}
   m_CullTransparentMesh: 1
---- !u!4 &1094923584 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 509135791, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
-  m_PrefabInstance: {fileID: 3350546007210928180}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1304895597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,7 +1420,7 @@ GameObject:
   - component: {fileID: 2135235515}
   - component: {fileID: 2135235514}
   - component: {fileID: 2135235513}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1530,18 +1525,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
-      propertyPath: jumpPower
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
-      propertyPath: totalJumps
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
-      propertyPath: overheadCheckCollider
-      value: 
-      objectReference: {fileID: 1094923584}
     - target: {fileID: 2269462944225570074, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
       propertyPath: m_RootOrder
       value: 7
