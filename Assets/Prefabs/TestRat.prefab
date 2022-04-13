@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509135790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.09, z: 0}
+  m_LocalPosition: {x: 0, y: 0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2269462944225570074}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081300626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.4, z: 0}
+  m_LocalPosition: {x: 0, y: -0.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2269462944225570074}
@@ -161,9 +161,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 3
   m_AngularDrag: 0.05
-  m_GravityScale: 12
+  m_GravityScale: 15
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -213,18 +213,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dddcfa27f5c9d0c4ebaac54c49700a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 3548410781026162858}
-  standingCollider: {fileID: 494514033}
-  crouchingCollider: {fileID: 3292308519660921738}
   groundCheckCollider: {fileID: 1081300627}
-  ceilingCheckCollider: {fileID: 509135791}
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
-  speed: 5
-  jumpPower: 50
+  speed: 10
+  jumpPower: 2000
   groundCheckRadius: 0.2
-  ceilingCheckRadius: 0.4
-  crouchSpeedModifier: 0.35
   isGrounded: 0
-  isCrouching: 0
