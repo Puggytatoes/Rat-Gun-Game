@@ -162,12 +162,12 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 2
-  m_AngularDrag: 0.05
-  m_GravityScale: 12
+  m_AngularDrag: 10
+  m_GravityScale: 15
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &494514033
 CapsuleCollider2D:
@@ -182,8 +182,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.000048915546}
-  m_Size: {x: 1, y: 0.9999058}
+  m_Offset: {x: 0, y: -0.022740364}
+  m_Size: {x: 1, y: 1.0452888}
   m_Direction: 0
 --- !u!70 &3292308519660921738
 CapsuleCollider2D:
@@ -198,8 +198,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.29496282}
-  m_Size: {x: 0.82, y: 0.41}
+  m_Offset: {x: -0.0018154383, y: -0.29496282}
+  m_Size: {x: 0.9979007, y: 0.49895036}
   m_Direction: 0
 --- !u!114 &494514032
 MonoBehaviour:
@@ -222,7 +222,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   speed: 5
-  jumpPower: 50
+  jumpPower: 35
+  decayRate: 140
   groundCheckRadius: 0.2
   ceilingCheckRadius: 0.4
   crouchSpeedModifier: 0.35

@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float speed = 5;
     [SerializeField] float jumpPower = 50;
+    [SerializeField] float decayRate = 5;
     [SerializeField] float groundCheckRadius = 0.2f;
     [SerializeField] float ceilingCheckRadius = 0.4f;
 
@@ -22,6 +23,24 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] bool isCrouching;
     bool isJumping = false;
+    IEnumerator DoJump()
+    {
+        //the initial jump
+        //rb.AddForce(Vector2.up * jumpPower);
+        rb.velocity = (new Vector2(0f, jumpPower));
+        yield return null;
+
+        //can be any value, maybe this is a start ascending force, up to you
+        float currentForce = jumpPower;
+
+        while (Input.GetKey(KeyCode.Space) && currentForce > 0)
+        {
+            rb.AddForce(Vector2.up * currentForce);
+
+            currentForce -= decayRate * Time.deltaTime;
+            yield return null;
+        }
+    }
 
     void Awake()
     {
@@ -90,7 +109,8 @@ public class PlayerController : MonoBehaviour
             {
                 isGrounded = false;
                 jumpFlag = false;
-                rb.velocity = (new Vector2(0f, jumpPower));
+                StartCoroutine(DoJump());
+                //rb.velocity = (new Vector2(0f, jumpPower));
             }
         }
         float xVal = dir * speed * 100 * Time.fixedDeltaTime;
