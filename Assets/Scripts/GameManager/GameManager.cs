@@ -60,6 +60,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public static void skipping()
+    {
+        SceneManager.LoadScene(_instance.m_Levels[2]);    //press K key to skip the prologue scene
+    }
+
     public static void QuitToTitle()    //returning to the title
     {
         m_State = GAMESTATE.MENU;

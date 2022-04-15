@@ -1172,8 +1172,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Levels:
+  - MainMenu
+  - Prologue
   - SampleScene
-  m_TitleSceneName: SampleScene
+  m_TitleSceneName: MainMenu
 --- !u!4 &1494298510
 Transform:
   m_ObjectHideFlags: 0
