@@ -1,0 +1,612 @@
+fileFormatVersion: 2
+guid: f45f2fd28b8d96742b1ede1cfa7485c1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6470616105838888955
+    second: Poison_Gas_Pipe_Sprite_Sheet_0
+  - first:
+      213: -3887613066544492167
+    second: Poison_Gas_Pipe_Sprite_Sheet_1
+  - first:
+      213: 4235552307158650093
+    second: Poison_Gas_Pipe_Sprite_Sheet_2
+  - first:
+      213: -175099995336655455
+    second: Poison_Gas_Pipe_Sprite_Sheet_3
+  - first:
+      213: 1106529417336401011
+    second: Poison_Gas_Pipe_Sprite_Sheet_4
+  - first:
+      213: 5946862268221425499
+    second: Poison_Gas_Pipe_Sprite_Sheet_5
+  - first:
+      213: 7630859991530101946
+    second: Poison_Gas_Pipe_Sprite_Sheet_6
+  - first:
+      213: -1008182527045070574
+    second: Poison_Gas_Pipe_Sprite_Sheet_7
+  - first:
+      213: -6561277362423899570
+    second: Poison_Gas_Pipe_Sprite_Sheet_8
+  - first:
+      213: 191877024474794397
+    second: Poison_Gas_Pipe_Sprite_Sheet_9
+  - first:
+      213: -2570310019533701469
+    second: Poison_Gas_Pipe_Sprite_Sheet_10
+  - first:
+      213: 7951843148252790533
+    second: Poison_Gas_Pipe_Sprite_Sheet_11
+  - first:
+      213: 3853836820932846993
+    second: Poison_Gas_Pipe_Sprite_Sheet_12
+  - first:
+      213: 3639037952864095055
+    second: Poison_Gas_Pipe_Sprite_Sheet_13
+  - first:
+      213: 2603694639962503768
+    second: Poison_Gas_Pipe_Sprite_Sheet_14
+  - first:
+      213: 4539912426687200409
+    second: Poison_Gas_Pipe_Sprite_Sheet_15
+  - first:
+      213: 7656301354700956031
+    second: Poison_Gas_Pipe_Sprite_Sheet_16
+  - first:
+      213: -729587742439612918
+    second: Poison_Gas_Pipe_Sprite_Sheet_17
+  - first:
+      213: -4615444070713694263
+    second: Poison_Gas_Pipe_Sprite_Sheet_18
+  - first:
+      213: 8906295761302639813
+    second: Poison_Gas_Pipe_Sprite_Sheet_19
+  - first:
+      213: 7965421845264247397
+    second: Poison_Gas_Pipe_Sprite_Sheet_20
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7c272c01f3cc950800000000000000
+      internalID: 6470616105838888955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971d270738c6c0ac0800000000000000
+      internalID: -3887613066544492167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec07c7e164b7ca30800000000000000
+      internalID: 4235552307158650093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad39c16b7be19df0800000000000000
+      internalID: -175099995336655455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c2bd574ae2b5f00800000000000000
+      internalID: 1106529417336401011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b570381a9bf778250800000000000000
+      internalID: 5946862268221425499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc54e57bb246e960800000000000000
+      internalID: 7630859991530101946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21119be45573202f0800000000000000
+      internalID: -1008182527045070574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a59e38009a1f4a0800000000000000
+      internalID: -6561277362423899570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d99016c132fa9a200800000000000000
+      internalID: 191877024474794397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aef013c7ac645cd0800000000000000
+      internalID: -2570310019533701469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f3b31763f9a5e60800000000000000
+      internalID: 7951843148252790533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 195e50e8b249b7530800000000000000
+      internalID: 3853836820932846993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4b01a8dcb5708230800000000000000
+      internalID: 3639037952864095055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85abd86ea7e222420800000000000000
+      internalID: 2603694639962503768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c72107c42010f30800000000000000
+      internalID: 4539912426687200409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71ea4c6485a04a60800000000000000
+      internalID: 7656301354700956031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e586350dbffd5f0800000000000000
+      internalID: -729587742439612918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c76d644216a2ffb0800000000000000
+      internalID: -4615444070713694263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4d20daec4899b70800000000000000
+      internalID: 8906295761302639813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poison_Gas_Pipe_Sprite_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 34
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56aac1537fcda8e60800000000000000
+      internalID: 7965421845264247397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
