@@ -221,8 +221,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
-  speed: 5
-  jumpPower: 30
+  speed: 7
+  jumpPower: 27
   decayRate: 140
   groundCheckRadius: 0.2
   ceilingCheckRadius: 0.4

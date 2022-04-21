@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
 
     [SerializeField] float speed = 5;
-    [SerializeField] float jumpPower = 50;
+    [SerializeField] float jumpPower = 30;
     [SerializeField] float decayRate = 5;
     [SerializeField] float groundCheckRadius = 0.2f;
     [SerializeField] float ceilingCheckRadius = 0.4f;
