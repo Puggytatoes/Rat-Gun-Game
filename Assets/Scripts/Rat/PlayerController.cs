@@ -118,6 +118,7 @@ public class PlayerController : MonoBehaviour
         {
             xVal *= crouchSpeedModifier;
             //sprite.color = new Color(0, 255, 255); // REMOVE LATER
+
         }
         else
         {
