@@ -117,11 +117,11 @@ public class PlayerController : MonoBehaviour
         if (crouchFlag)
         {
             xVal *= crouchSpeedModifier;
-            sprite.color = new Color(0, 255, 255); // REMOVE LATER
+            //sprite.color = new Color(0, 255, 255); // REMOVE LATER
         }
         else
         {
-            sprite.color = new Color(255, 0, 0); // REMOVE LATER
+            //sprite.color = new Color(255, 0, 0); // REMOVE LATER
         }
 
         Vector2 targetVelocity = new Vector2(xVal, rb.velocity.y);
