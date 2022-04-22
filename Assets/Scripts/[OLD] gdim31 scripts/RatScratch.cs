@@ -55,6 +55,7 @@ public class RatScratch : MonoBehaviour
     void Scratch()
     {
         //play scratch animation
+        Debug.Log("scritch scritch bitch");
         animator.SetTrigger("Scratch");
 
         //check enemies in range

@@ -60,6 +60,36 @@ Transform:
   m_Father: {fileID: 2269462944225570074}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1568168948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1568168949}
+  m_Layer: 0
+  m_Name: ScratchHitbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1568168949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568168948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2269462944225570074}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7636609992046159373
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,9 +106,12 @@ GameObject:
   - component: {fileID: 3094259009991104672}
   - component: {fileID: 1230992365}
   - component: {fileID: 1230992359}
+  - component: {fileID: 3350546007210928182}
+  - component: {fileID: 3350546007210928183}
+  - component: {fileID: 3350546007210928184}
   m_Layer: 0
   m_Name: TestRat
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +129,7 @@ Transform:
   m_Children:
   - {fileID: 1081300627}
   - {fileID: 509135791}
+  - {fileID: 1568168949}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -282,3 +316,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83cc8cbe773febc4fa30739914bb058c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3350546007210928182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7636609992046159373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48c379508cf1f7b42ab30e320c4ecb79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  numOfHearts: 5
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullHeart: {fileID: 21300000, guid: 5bafffd050e49274abbaca59e3a6162a, type: 3}
+  emptyHeart: {fileID: 21300000, guid: bd7e45187163a634a87ed0efdbb6eca4, type: 3}
+--- !u!114 &3350546007210928183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7636609992046159373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016fd05bf1f678a44acb1adcd58b85fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3350546007210928184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7636609992046159373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9f3af279c6b614494640a25cf501e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1230992365}
+  rb: {fileID: 494514034}
+  scratchHitbox: {fileID: 1568168949}
+  attackRange: 1
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  numDamage: 40
+  scratchRate: 2.5
