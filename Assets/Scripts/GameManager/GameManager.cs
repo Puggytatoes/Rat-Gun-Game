@@ -76,4 +76,9 @@ public class GameManager : MonoBehaviour
         m_State = GAMESTATE.RESTART;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); //restart the currently activated scene
     }
+
+    public static void AfterVideo()
+    {
+        SceneManager.LoadScene(_instance.m_Levels[2]);
+    }
 }
