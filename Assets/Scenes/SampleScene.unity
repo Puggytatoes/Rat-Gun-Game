@@ -4483,30 +4483,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906037801}
   m_CullTransparentMesh: 1
---- !u!1 &1230992358 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7636609992046159373, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
-  m_PrefabInstance: {fileID: 3350546007210928180}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1230992365
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230992358}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a9525d21d4e5fca45b4b81d67c6e907c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1304895597
 GameObject:
   m_ObjectHideFlags: 0
@@ -4950,18 +4926,6 @@ PrefabInstance:
     - target: {fileID: 2269462944225570074, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094259009991104672, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
-      propertyPath: m_Size.x
-      value: 0.7222845
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094259009991104672, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.10231492
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094259009991104672, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.203125
       objectReference: {fileID: 0}
     - target: {fileID: 7636609992046159373, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
       propertyPath: m_Name
