@@ -16,11 +16,13 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private float secondEnd;
 
+    public SpriteRenderer sr;
     public Rigidbody2D rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void Update()
