@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] bool isCrouching;
     bool isJumping = false;
+
+    public Animator animator;
+
     IEnumerator DoJump()
     {
         //the initial jump
