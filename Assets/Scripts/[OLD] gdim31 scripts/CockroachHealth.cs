@@ -60,7 +60,7 @@ public class CockroachHealth : MonoBehaviour
         RemoveCockroach(this);
     }
 
-    /*
+    
     public void Knockback()
     {
         int dirCheck = RatScratch.ratDir;
@@ -78,7 +78,8 @@ public class CockroachHealth : MonoBehaviour
             yield return new WaitForSeconds(knockbackTime);
             enemyBody.velocity = Vector2.zero;
             enemyBody.isKinematic = true;
+            EnemyMovement.speed = 0;
         }
     }
-    */
+    
 }

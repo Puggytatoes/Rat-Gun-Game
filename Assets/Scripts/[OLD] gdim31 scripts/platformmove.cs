@@ -6,32 +6,31 @@ public class platformmove : MonoBehaviour
 {
     public float speed;
 
-    public Vector3[] locations;
+    public int startingPoint;
 
-    public int index;
-
-    
-
-    public bool isFacingRight = true;
+    public Transform[] points;
 
     
 
+    private int i;
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void Start()
     {
-        transform.position = Vector2.MoveTowards(transform.position, locations[index], Time.deltaTime * speed);
-
-        if (transform.position == locations[index])
+        transform.position = points[startingPoint].position;
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
         {
-            if (index == locations.Length - 1)
+            i++;
+            if (i == points.Length)
             {
-                index = 0;
-            }
-            else
-            {
-                index++;
+                i = 0;
             }
         }
+        transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
+
     }
+
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7077846468418059703}
   - component: {fileID: 7077846468418059702}
   - component: {fileID: 7077846468418059698}
-  - component: {fileID: 7077846468418059697}
+  - component: {fileID: 2580928985008154763}
   - component: {fileID: 7077846468418059696}
   - component: {fileID: 7077846468418059699}
   m_Layer: 7
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83cc8cbe773febc4fa30739914bb058c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7077846468418059697
+--- !u!114 &2580928985008154763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,12 +110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa5418eb5063984287b685c8ab3732c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  locations:
-  - {x: 70, y: 0, z: 0}
-  - {x: 45, y: 0, z: 0}
-  index: 0
-  isFacingRight: 1
+  speed: 0
+  startingPoint: 0
+  points: []
 --- !u!50 &7077846468418059696
 Rigidbody2D:
   serializedVersion: 4
