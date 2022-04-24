@@ -14,9 +14,16 @@ public class VideoManager : MonoBehaviour
         VideoPlayer.loopPointReached += AfterVideo;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            SceneManager.LoadScene("Level2");
+        }
+    }
 
     void AfterVideo(VideoPlayer vp)
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level2");
     }
 }

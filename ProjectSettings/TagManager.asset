@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - movingplat
+  - portal
   layers:
   - Default
   - TransparentFX
