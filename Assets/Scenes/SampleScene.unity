@@ -4537,7 +4537,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b9e14a1110d904aa2aed42ed731faa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
   locations:
   - {x: 3.8, y: -0.2, z: 0}
   - {x: 9.8, y: -0.2, z: 0}
@@ -5211,11 +5210,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &1733666823 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1230992365, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
-  m_PrefabInstance: {fileID: 3350546007210928180}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1747285787 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6484892480471313882, guid: 21c113a0374e61440941cf65ea859418, type: 3}
@@ -5386,10 +5380,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1733666823}
     - target: {fileID: 2269462944225570074, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -5454,24 +5444,11 @@ PrefabInstance:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 163349411}
-    - target: {fileID: 3350546007210928184, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
-      propertyPath: scratchRate
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3350546007210928186, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
-      propertyPath: glockBullet
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548410781026162858, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7636609992046159373, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
       propertyPath: m_Name
       value: TestRat
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3350546007210928186, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
 --- !u!4 &3350546007210928191 stripped
 Transform:

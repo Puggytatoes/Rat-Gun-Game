@@ -109,7 +109,6 @@ GameObject:
   - component: {fileID: 3350546007210928182}
   - component: {fileID: 3350546007210928183}
   - component: {fileID: 3350546007210928184}
-  - component: {fileID: 3350546007210928186}
   m_Layer: 0
   m_Name: TestRat
   m_TagString: Player
@@ -234,7 +233,7 @@ MonoBehaviour:
   crouchSpeedModifier: 0.35
   isGrounded: 0
   isCrouching: 0
-  animator: {fileID: 0}
+  animator: {fileID: 1230992365}
 --- !u!61 &6851617779391966199
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -372,20 +371,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   numDamage: 40
-  scratchRate: 2.5
---- !u!114 &3350546007210928186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7636609992046159373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69e1fd79d7106764d8a85ff70242b5c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ratGlock: {fileID: 0}
-  glockBullet: {fileID: 0}
-  BulletSpeed: 700
-  ShootPoint: {fileID: 0}
+  scratchRate: 3

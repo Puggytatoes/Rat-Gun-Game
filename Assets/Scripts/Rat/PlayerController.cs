@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] bool isCrouching;
     bool isJumping = false;
+    bool facingRight = true;
 
     public Animator animator;
 
@@ -48,6 +49,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -130,6 +132,21 @@ public class PlayerController : MonoBehaviour
 
         Vector2 targetVelocity = new Vector2(xVal, rb.velocity.y);
         rb.velocity = targetVelocity;
+
+        if (facingRight && dir < 0)
+        {
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+            facingRight = false;
+        }
+
+        else if (!facingRight && dir > 0)
+        {
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+            facingRight = true;
+        }
+
+        // Set float xVelocity value according to the x value of the rb2d velocity
+        animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
     }
 
     void OnDrawGizmosSelected() // This is here just for debugging purposes
