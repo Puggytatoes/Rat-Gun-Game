@@ -226,7 +226,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   speed: 7
-  jumpPower: 30
+  jumpPower: 40
   decayRate: 140
   groundCheckRadius: 0.4
   ceilingCheckRadius: 0.38
