@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerPos : MonoBehaviour
 {
     private GameMaster gm;
-    private Health hl;
+    [SerializeField]private Health hl;
 
     void Start()
     {
