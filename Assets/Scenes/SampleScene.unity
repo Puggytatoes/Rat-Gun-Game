@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 3
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -5373,6 +5373,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.3}
   m_EdgeRadius: 0
+--- !u!114 &2036367110 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+  m_PrefabInstance: {fileID: 3350546007210928180}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddcfa27f5c9d0c4ebaac54c49700a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3350546007210928180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5380,6 +5391,66 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: OnCrouchEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: OnCrouchEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2036367110}
+    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: OnCrouchEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2036367110}
+    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnLanding
+      objectReference: {fileID: 0}
+    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: OnCrouchEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: OnCrouchEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnCrouching
+      objectReference: {fileID: 0}
+    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: OnCrouchEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: OnCrouchEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: OnCrouchEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2269462944225570074, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -5452,6 +5523,10 @@ PrefabInstance:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 163349411}
+    - target: {fileID: 3350546007210928184, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7636609992046159373, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
       propertyPath: m_Name
       value: TestRat

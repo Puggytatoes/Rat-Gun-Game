@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] SpriteRenderer sprite; // REMOVE LATER unless using it for something besides color
@@ -27,6 +27,18 @@ public class PlayerController : MonoBehaviour
 
     public Animator animator;
 
+    [Header("Events")]
+    [Space]
+
+    public UnityEvent OnLandEvent;
+
+    [Header("Events")]
+    [Space]
+
+    public UnityEvent OnCrouchEvent;
+
+    [System.Serializable]
+    public class BoolEvent : UnityEvent<bool> { }
     IEnumerator DoJump()
     {
         //the initial jump
@@ -60,17 +72,39 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = true;
             isCrouching = false;
+            animator.SetBool("isJumping", true);
         }
         else if (Input.GetButtonUp("Jump"))
+        {
             isJumping = false;
-
+            animator.SetBool("isJumping", false);
+        }
         if (Input.GetButton("Crouch") && isGrounded)
             if (Input.GetButton("Jump"))
+            {
                 isCrouching = false;
+                animator.SetBool("isCrouching", false);
+            }
             else
+            {
                 isCrouching = true;
+                animator.SetBool("isCrouching", true);
+            }
         else
+        {
             isCrouching = false;
+            animator.SetBool("isCrouching", false);
+        }
+    }
+
+    public void OnLanding()
+    {
+        animator.SetBool("isJumping", false);
+    }
+
+    public void OnCrouching(bool isCrouching)
+    {
+        animator.SetBool("isCrouching", isCrouching);
     }
 
     void FixedUpdate()
