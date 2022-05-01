@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     [SerializeField]
-    private int health;
+    public int health;
 
     [SerializeField]
     private int numOfHearts;
