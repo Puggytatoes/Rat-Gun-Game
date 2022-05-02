@@ -226,7 +226,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   speed: 7
-  jumpPower: 40
+  jumpPower: 35
   decayRate: 140
   groundCheckRadius: 0.4
   ceilingCheckRadius: 0.38
@@ -234,6 +234,12 @@ MonoBehaviour:
   isGrounded: 0
   isCrouching: 0
   animator: {fileID: 1230992365}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCrouchEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &6851617779391966199
 BoxCollider2D:
   m_ObjectHideFlags: 0
