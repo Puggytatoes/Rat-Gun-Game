@@ -10,8 +10,6 @@ public class platformmove : MonoBehaviour
 
     public Transform[] points;
 
-    
-
     private int i;
 
     void Start()
@@ -34,11 +32,11 @@ public class platformmove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.transform.SetParent(transform);
+        collision.gameObject.transform.SetParent(transform);
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        collision.transform.SetParent(null);
+        collision.gameObject.transform.SetParent(null);
     }
 }

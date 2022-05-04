@@ -12,10 +12,13 @@ public class CollideFlip : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        Debug.Log(coll + "Contact made");
-        Vector3 temp;
-        temp = coll.transform.localScale;
-        temp.x *= -1f;
-        coll.transform.localScale = temp;
+        if (coll.CompareTag("Enemy"))
+        {
+            Vector3 temp;
+            temp = coll.transform.localScale;
+            temp.x *= -1f;
+            coll.transform.localScale = temp;
+        }
+            
     }
 }

@@ -4,32 +4,30 @@ using UnityEngine;
 
 public class PizzaMove : MonoBehaviour
 {
-    [SerializeField]
-    private float speed;
-    public Vector3[] locations;
-    public int index;
-    public Rigidbody2D rb;
+    public float speed;
+
+    public int startingPoint;
+
+    public Transform[] points;
+
+    private int i;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        transform.position = points[startingPoint].position;
     }
-
+    // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, locations[index], Time.deltaTime * speed);
-
-        if (transform.position == locations[index])
+        if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
         {
-            if (index == locations.Length - 1)
+            i++;
+            if (i == points.Length)
             {
-                index = 0;
-            }
-            else
-            {
-                index++;
+                i = 0;
             }
         }
+        transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
     }
 
 }
