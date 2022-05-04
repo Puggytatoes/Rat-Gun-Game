@@ -78,7 +78,7 @@ public class CockroachHealth : MonoBehaviour
             yield return new WaitForSeconds(knockbackTime);
             enemyBody.velocity = Vector2.zero;
             enemyBody.isKinematic = true;
-            EnemyMovement.speed = 0;
+            //EnemyMovement.speed = 0;
         }
     }
     
