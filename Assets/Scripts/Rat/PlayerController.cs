@@ -27,6 +27,10 @@ public class PlayerController : MonoBehaviour
 
     public Animator animator;
 
+
+   
+
+
     [Header("Events")]
     [Space]
 
@@ -58,15 +62,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Awake()
+
+    float dirX;
+    float moveSpeed = 5f;
+    bool isMoving = false;
+    AudioSource rataudio;
+
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        rataudio = GetComponent<AudioSource>();
+
     }
 
     void Update()
     {
-        horizontalValue = Input.GetAxisRaw("Horizontal");
+        
+
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -111,6 +124,21 @@ public class PlayerController : MonoBehaviour
     {
         GroundCheck();
         Move(horizontalValue, isJumping, isCrouching);
+
+        horizontalValue = Input.GetAxisRaw("Horizontal");
+        dirX = Input.GetAxis("Horizontal") * moveSpeed;
+
+        if (rb.velocity.x != 0)
+            isMoving = true;
+        else
+            isMoving = false;
+        if (isMoving && isGrounded)
+        {
+            if (!rataudio.isPlaying)
+                rataudio.Play();
+        }
+        else
+            rataudio.Stop();
     }
 
     void GroundCheck()
