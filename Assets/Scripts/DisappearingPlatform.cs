@@ -14,7 +14,7 @@ public class DisappearingPlatform : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name.Equals("TestRat"))
+        if (col.gameObject.name.Equals ("TestRat"))
         {
             PlatformManager.Instance.StartCoroutine("SpawnPlatform",
                 new Vector2(transform.position.x, transform.position.y));
@@ -27,5 +27,10 @@ public class DisappearingPlatform : MonoBehaviour
     {
         pf.isKinematic = false;
     }
-   
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
