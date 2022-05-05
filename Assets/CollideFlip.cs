@@ -16,7 +16,10 @@ public class CollideFlip : MonoBehaviour
         {
             Vector3 temp;
             temp = coll.transform.localScale;
-            temp.x *= -1f;
+            if (gameObject.tag == "LeftPoint")
+                temp.x = -1f;
+            else if (gameObject.tag == "RightPoint")
+                temp.x = 1f;
             coll.transform.localScale = temp;
         }
             

@@ -78,8 +78,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        
-
 
         if (Input.GetButtonDown("Jump"))
         {

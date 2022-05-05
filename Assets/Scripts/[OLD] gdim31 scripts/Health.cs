@@ -20,16 +20,13 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        numOfHearts = sHearts;
-        if (numOfHearts == 0)
+        health = sHearts;
+        if (health == 0)
         {
             StartCoroutine(WaitCoroutine());
             sHearts = 5;
-            Score.totalScore = 0;
-            GetCollected.numPizzas = 0;
-            CockroachHealth.numCockroaches = 0;
-
         }
+
         if (health > numOfHearts)
         {
             health = numOfHearts;
@@ -59,10 +56,18 @@ public class Health : MonoBehaviour
     IEnumerator WaitCoroutine()
     {
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        Score.totalScore = 0;
+        GetCollected.numPizzas = 0;
+        CockroachHealth.numCockroaches = 0;
     }
     public static void RemoveHeart()
     {
         sHearts -= 1;
+    }
+
+    public static int GetHearts()
+    {
+        return sHearts;
     }
 }

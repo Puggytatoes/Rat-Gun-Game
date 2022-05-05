@@ -8,6 +8,8 @@ TagManager:
   - movingplat
   - portal
   - GM
+  - LeftPoint
+  - RightPoint
   layers:
   - Default
   - TransparentFX
