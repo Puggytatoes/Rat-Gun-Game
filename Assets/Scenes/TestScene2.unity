@@ -36177,10 +36177,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3350546007210928182, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
-      propertyPath: health
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3350546007210928182, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 
       objectReference: {fileID: 191518185}
