@@ -22,10 +22,13 @@ public class RatScratch : MonoBehaviour
     private float ratDirection = 0;
     public static int ratDir = 0;
 
+    AudioSource rataudio;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
+
     void Update()
     {
          ratDirection = rb.transform.rotation.y;
@@ -48,17 +51,20 @@ public class RatScratch : MonoBehaviour
             }
         }
     }
-    
+  
     public int GetRatDirection(int rdir)
     {
         return rdir;
     }
+
+   
+
     void Scratch()
     {
         //play scratch animation
         Debug.Log("scritch scritch bitch");
+        audiomanager.instance.PlaySFX("scratch");
         animator.SetTrigger("Scratch");
-
         //check enemies in range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(scratchHitbox.position, attackRange, enemyLayer);
 

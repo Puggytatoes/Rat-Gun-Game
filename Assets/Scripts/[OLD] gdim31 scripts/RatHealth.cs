@@ -34,6 +34,7 @@ public class RatHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Hurt();
+            
         }
 
         if (collision.gameObject.CompareTag("hazard"))
@@ -47,6 +48,7 @@ public class RatHealth : MonoBehaviour
 
     public void Hurt()
     {
+        
         if (isInvincible)
             return;
         isInvincible = true;
@@ -56,6 +58,7 @@ public class RatHealth : MonoBehaviour
         else if (Health.GetHearts() == 1)
             anim.SetTrigger("Death");
         Health.RemoveHeart();
+        audiomanager.instance.PlaySFX("damaged");
     }
 
     private void RestartLevel()

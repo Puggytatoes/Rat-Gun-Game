@@ -35,9 +35,10 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        rataudio = GetComponent<AudioSource>();
-    }
+      
 
+    }
+ 
     void Update()
     {
         if (Input.GetButtonDown("Jump"))
@@ -95,11 +96,9 @@ public class PlayerController : MonoBehaviour
             isMoving = false;
         if (isMoving && isGrounded)
         {
-            if (!rataudio.isPlaying)
-                rataudio.Play();
+            audiomanager.instance.PlaySFX("walk");
         }
-        else
-            rataudio.Stop();
+        
     }
 
     void GroundCheck()
