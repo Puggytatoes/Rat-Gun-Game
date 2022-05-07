@@ -7,6 +7,7 @@ public class RatHealth : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody2D rb;
+    private GameMaster gm;
 
     private bool isInvincible;
     private float invincibleTimer;
@@ -34,7 +35,16 @@ public class RatHealth : MonoBehaviour
         {
             Hurt();
         }
+
+        if (collision.gameObject.CompareTag("hazard"))
+        {
+            gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+            transform.position = gm.lastCheckPointPos;
+            Hurt();
+        }
     }
+
+
     public void Hurt()
     {
         if (isInvincible)
