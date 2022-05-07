@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Bill
 public class RatScratch : MonoBehaviour
 {
     public Animator animator;
@@ -41,11 +40,13 @@ public class RatScratch : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Mouse0) && animator.GetBool("canScratch"))
             {
-                Scratch();
-                nextScratchTime = Time.time + 1f / scratchRate;
+                if (PlayerController.GetCeilingCheck() == false)
+                {
+                    Scratch();
+                    nextScratchTime = Time.time + 1f / scratchRate;
+                }
             }
         }
-
     }
     
     public int GetRatDirection(int rdir)
