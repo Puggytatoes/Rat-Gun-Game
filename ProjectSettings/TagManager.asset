@@ -10,6 +10,7 @@ TagManager:
   - GM
   - LeftPoint
   - RightPoint
+  - hazard
   layers:
   - Default
   - TransparentFX
