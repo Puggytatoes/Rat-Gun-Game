@@ -18,7 +18,7 @@ public class DisappearingPlatform : MonoBehaviour
         {
             PlatformManager.Instance.StartCoroutine("SpawnPlatform",
                 new Vector2(transform.position.x, transform.position.y));
-            Invoke("DropPlatform", 0.5f);
+            Invoke("DropPlatform", 3f);
             Destroy(gameObject, 1f);
         }
     }
