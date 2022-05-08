@@ -55,7 +55,7 @@ public class Health : MonoBehaviour
 
     IEnumerator WaitCoroutine()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
         Score.totalScore = 0;
         GetCollected.numPizzas = 0;

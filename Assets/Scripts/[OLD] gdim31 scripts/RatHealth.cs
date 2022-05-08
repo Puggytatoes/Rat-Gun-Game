@@ -11,7 +11,7 @@ public class RatHealth : MonoBehaviour
 
     private bool isInvincible;
     private float invincibleTimer;
-    public float timeInvincible = 2f;
+    public float timeInvincible = 1f;
 
     void Start()
     {
@@ -48,7 +48,6 @@ public class RatHealth : MonoBehaviour
 
     public void Hurt()
     {
-        
         if (isInvincible)
             return;
         isInvincible = true;

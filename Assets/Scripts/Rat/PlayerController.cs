@@ -99,7 +99,6 @@ public class PlayerController : MonoBehaviour
         {
             audiomanager.instance.PlaySFX("walk");
         }
-        
     }
 
     void GroundCheck()

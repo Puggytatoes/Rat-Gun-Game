@@ -61,8 +61,6 @@ public class RatScratch : MonoBehaviour
 
     void Scratch()
     {
-        //play scratch animation
-        Debug.Log("scritch scritch bitch");
         audiomanager.instance.PlaySFX("scratch");
         animator.SetTrigger("Scratch");
         //check enemies in range

@@ -366,7 +366,7 @@ MonoBehaviour:
   animator: {fileID: 1230992365}
   rb: {fileID: 494514034}
   scratchHitbox: {fileID: 1568168949}
-  attackRange: 1.1
+  attackRange: 1.5
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256
