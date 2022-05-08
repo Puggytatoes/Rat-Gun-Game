@@ -6003,15 +6003,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 163349411}
     - target: {fileID: 3350546007210928184, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
-      propertyPath: scratch
-      value: 
+      propertyPath: attackRange
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7636609992046159373, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
       propertyPath: m_Name
       value: TestRat
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1848028960, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
 --- !u!4 &3350546007210928191 stripped
 Transform:

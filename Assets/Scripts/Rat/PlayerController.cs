@@ -41,11 +41,11 @@ public class PlayerController : MonoBehaviour
  
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isJumping == false)
         {
             Jump();
         }
-        else if (Input.GetButtonUp("Jump"))
+        else if (Input.GetButtonUp("Jump") && isJumping)
         {
             isJumping = false;
             animator.SetBool("isJumping", false);
@@ -65,6 +65,7 @@ public class PlayerController : MonoBehaviour
 
         //Set the yVelocity Value
         animator.SetFloat("yVelocity", rb.velocity.y);
+        animator.SetBool("isGrounded", isGrounded);
     }
 
     void Jump()
@@ -109,8 +110,10 @@ public class PlayerController : MonoBehaviour
         if (colliders.Length > 0 && underCeiling == false)
         {
             isGrounded = true;
-
+            
         }
+        animator.SetBool("isJumping", !isGrounded);
+
     }
 
     void Move(float dir, bool crouchFlag)
@@ -160,7 +163,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
     }
 
-    void OnDrawGizmosSelected() // This is here just for debugging purposes
+    public void OnDrawGizmosSelected() // This is here just for debugging purposes
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(ceilingCheckCollider.position, ceilingCheckRadius);

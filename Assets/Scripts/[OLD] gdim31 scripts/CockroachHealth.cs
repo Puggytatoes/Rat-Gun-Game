@@ -16,13 +16,13 @@ public class CockroachHealth : MonoBehaviour
 
     public Rigidbody2D enemyBody;
     public Animator animator;
-    public CapsuleCollider2D coll;
+    public BoxCollider2D coll;
 
     public static int numCockroaches = 0;
     private void Start()
     {
         currentHealth = maxHealth;
-        coll = GetComponent<CapsuleCollider2D>();
+        coll = GetComponent<BoxCollider2D>();
         enemyBody = GetComponent<Rigidbody2D>();
     }
 
