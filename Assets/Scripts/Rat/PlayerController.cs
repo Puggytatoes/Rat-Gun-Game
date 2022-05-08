@@ -29,12 +29,13 @@ public class PlayerController : MonoBehaviour
     float dirX;
     float moveSpeed = 5f;
     bool isMoving = false;
-    AudioSource rataudio;
+    public AudioSource rataudio;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        rataudio = GetComponent<AudioSource>();
       
 
     }
@@ -91,19 +92,26 @@ public class PlayerController : MonoBehaviour
         horizontalValue = Input.GetAxisRaw("Horizontal");
         dirX = Input.GetAxis("Horizontal") * moveSpeed;
 
-        if (rb.velocity.x > 5)
+        if (rb.velocity.x == 14)
+            isMoving = true;
+        else if (rb.velocity.x == -14)
             isMoving = true;
         else
             isMoving = false;
 
         if (isMoving && isGrounded)
         {
-            if (!kill.source.isPlaying)
+            Debug.Log(rb.velocity.x);
+            if (!rataudio.isPlaying)
             {
-                audiomanager.instance.PlaySFX("walk");
+                rataudio.Play();
             }
-            
         }
+        else
+        {
+            rataudio.Stop();
+        }
+        
     }
 
     void GroundCheck()
