@@ -91,13 +91,18 @@ public class PlayerController : MonoBehaviour
         horizontalValue = Input.GetAxisRaw("Horizontal");
         dirX = Input.GetAxis("Horizontal") * moveSpeed;
 
-        if (rb.velocity.x != 0)
+        if (rb.velocity.x > 5)
             isMoving = true;
         else
             isMoving = false;
+
         if (isMoving && isGrounded)
         {
-            audiomanager.instance.PlaySFX("walk");
+            if (!kill.source.isPlaying)
+            {
+                audiomanager.instance.PlaySFX("walk");
+            }
+            
         }
     }
 

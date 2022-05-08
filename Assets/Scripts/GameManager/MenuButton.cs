@@ -9,6 +9,8 @@ public class MenuButton : MonoBehaviour
     public void OnClickNewGame()
     {
         GameManager.NewGame(); //on clicking the assigned button, load a new game
+        
+
     }
 
     public void OnMainMenu()

@@ -5687,7 +5687,9 @@ MonoBehaviour:
   scratch: {fileID: 8300000, guid: cb93b7edee75c6c48b5f69f0bb37b0cb, type: 3}
   damaged: {fileID: 8300000, guid: 8f18995689b0dd04ead215f4905c60f0, type: 3}
   walk: {fileID: 8300000, guid: 77078f2d5e8518d488eebfaf1afc3ac9, type: 3}
+  sewers: {fileID: 8300000, guid: fdb1baae12c5cfe4fa686fc1b68cd29d, type: 3}
   soundobject: {fileID: 2340944034255258259, guid: 2cc2b1c2b011c9d4c9c48aef9f1ba512, type: 3}
+  currentmusicobject: {fileID: 0}
 --- !u!1 &1304895597
 GameObject:
   m_ObjectHideFlags: 0

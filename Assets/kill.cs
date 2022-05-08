@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class kill : MonoBehaviour
 {
-    AudioSource source;
+    public static AudioSource source;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +16,11 @@ public class kill : MonoBehaviour
     {
         if (!source.isPlaying)
         {
+
             Destroy(gameObject);
+
+            
         }
+   
     }
 }

@@ -14,8 +14,12 @@ public class audiomanager : MonoBehaviour
     public AudioClip scratch;
     public AudioClip damaged;
     public AudioClip walk;
+    public AudioClip sewers;
 
     public GameObject soundobject;
+
+    public GameObject currentmusicobject;
+
    public void PlaySFX (string sfxName)
     {
         switch (sfxName)
@@ -26,18 +30,42 @@ public class audiomanager : MonoBehaviour
             case "damaged":
                 SoundObjectCreation (damaged);
                 break;
-            
+            case "walk":
+                SoundObjectCreation(walk);
+                break;
 
         }
     }
 
+  
     void SoundObjectCreation(AudioClip clip)
     {
         GameObject newObject = Instantiate(soundobject, transform);
         newObject.GetComponent<AudioSource>().clip = clip;
         newObject.GetComponent<AudioSource>().Play();
     }
-   
+
+    public void PlayMusic(string musicName)
+    {
+        switch (musicName)
+        {
+            case "sewers":
+                SoundObjectCreation(sewers);
+                break;
+
+        }
+    }
+
+    void MusicObjectCreation(AudioClip clip)
+    {
+        if (currentmusicobject)
+            Destroy(currentmusicobject);
+        GameObject newObject = Instantiate(soundobject, transform);
+        newObject.GetComponent<AudioSource>().clip = clip;
+        newObject.GetComponent<AudioSource>().loop = true;
+        newObject.GetComponent<AudioSource>().Play();
+    }
+
     void Update()
     {
         
