@@ -20,7 +20,7 @@ public class audiomanager : MonoBehaviour
 
     public GameObject soundobject;
 
-    public GameObject currentmusicobject;
+    /*public GameObject currentmusicobject;*/
 
    public void PlaySFX (string sfxName)
     {
@@ -65,8 +65,8 @@ public class audiomanager : MonoBehaviour
 
     void MusicObjectCreation(AudioClip clip)
     {
-        if (currentmusicobject)
-            Destroy(currentmusicobject);
+       /* if (currentmusicobject)
+            Destroy(currentmusicobject); */
         GameObject newObject = Instantiate(soundobject, transform);
         newObject.GetComponent<AudioSource>().clip = clip;
         newObject.GetComponent<AudioSource>().loop = true;
