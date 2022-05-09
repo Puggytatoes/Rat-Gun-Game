@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isJumping", true);
         if (isGrounded && underCeiling == false)
         {
+            audiomanager.instance.PlaySFX("ratjump");
             rb.velocity = Vector2.up * jumpPower;
             isJumping = true;
             isCrouching = false;

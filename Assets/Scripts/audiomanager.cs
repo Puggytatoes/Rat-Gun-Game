@@ -15,6 +15,8 @@ public class audiomanager : MonoBehaviour
     public AudioClip damaged;
     public AudioClip walk;
     public AudioClip sewers;
+    public AudioClip roachdie;
+    public AudioClip ratjump;
 
     public GameObject soundobject;
 
@@ -33,7 +35,12 @@ public class audiomanager : MonoBehaviour
             case "walk":
                 SoundObjectCreation(walk);
                 break;
-
+            case "roachdie":
+                SoundObjectCreation(roachdie);
+                break;
+            case "ratjump":
+                SoundObjectCreation(ratjump);
+                break;
         }
     }
 

@@ -42,6 +42,7 @@ public class CockroachHealth : MonoBehaviour
 
     void Dead()
     {
+        audiomanager.instance.PlaySFX("roachdie");
         animator.SetBool("isDead", true);
         GetComponent<EnemyMovement>().enabled = false;
         coll.enabled = false;
@@ -51,6 +52,7 @@ public class CockroachHealth : MonoBehaviour
 
     public static void RemoveCockroach(CockroachHealth cockroach)
     {
+        
         Destroy(cockroach.gameObject);
     }
 
