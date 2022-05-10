@@ -23,7 +23,7 @@ public class Health : MonoBehaviour
         health = sHearts;
         if (health == 0)
         {
-            StartCoroutine(WaitCoroutine());
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             sHearts = 5;
         }
 
