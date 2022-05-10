@@ -9,6 +9,7 @@ public class DisappearingPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         pf = GetComponent<Rigidbody2D>();
     }
 
@@ -26,11 +27,5 @@ public class DisappearingPlatform : MonoBehaviour
     void DropPlatform()
     {
         pf.isKinematic = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
