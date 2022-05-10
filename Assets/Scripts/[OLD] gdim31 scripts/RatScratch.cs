@@ -18,8 +18,8 @@ public class RatScratch : MonoBehaviour
     [SerializeField]
     private float scratchRate;
     private float nextScratchTime = 0f;
-    private int leftOrRight = 0;
-    private float ratDirection = 0;
+    //private int leftOrRight = 0;
+    //private float ratDirection = 0;
     public static int ratDir = 0;
 
     AudioSource rataudio;
