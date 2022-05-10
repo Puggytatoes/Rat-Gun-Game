@@ -102,7 +102,6 @@ public class PlayerController : MonoBehaviour
 
         if (isMoving && isGrounded)
         {
-            Debug.Log(rb.velocity.x);
             if (!rataudio.isPlaying)
             {
                 rataudio.Play();
