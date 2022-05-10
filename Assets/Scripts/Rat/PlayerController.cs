@@ -10,8 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform ceilingCheckCollider;
     [SerializeField] LayerMask groundLayer;
 
-    [SerializeField] float speed = 5;
-    [SerializeField] float jumpPower = 30;
+    public static float speed = 7;
+    public static float jumpPower = 35;
     [SerializeField] float groundCheckRadius = 0.2f;
     [SerializeField] float ceilingCheckRadius = 0.4f;
 
@@ -36,8 +36,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         rataudio = GetComponent<AudioSource>();
-      
-
+        speed = 7;
+        jumpPower = 35;
     }
  
     void Update()
@@ -113,6 +113,8 @@ public class PlayerController : MonoBehaviour
         }
         
     }
+
+
 
     void GroundCheck()
     {

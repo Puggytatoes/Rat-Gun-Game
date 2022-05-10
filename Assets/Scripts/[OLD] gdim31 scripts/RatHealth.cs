@@ -11,7 +11,8 @@ public class RatHealth : MonoBehaviour
 
     private bool isInvincible;
     private float invincibleTimer;
-    public float timeInvincible = 0.5f;
+    public float timeInvincible = 1f;
+    public float stopTime = 0.75f;
 
     void Start()
     {
@@ -41,6 +42,7 @@ public class RatHealth : MonoBehaviour
             gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
             transform.position = gm.lastCheckPointPos;
             Hurt();
+            Freeze();
         }
     }
 
@@ -52,7 +54,10 @@ public class RatHealth : MonoBehaviour
         isInvincible = true;
         invincibleTimer = timeInvincible;
         if (Health.GetHearts() > 1)
+        {
             anim.SetTrigger("Ouch");
+        }
+
         else if (Health.GetHearts() == 1)
         {
 
@@ -65,6 +70,21 @@ public class RatHealth : MonoBehaviour
         audiomanager.instance.PlaySFX("damaged");
     }
 
+    public void Freeze()
+    {
+        StartCoroutine(FreezeRoutine());
+    }
+
+    private IEnumerator FreezeRoutine()
+    {
+        PlayerController.speed = 0;
+        PlayerController.jumpPower = 0;
+
+        yield return new WaitForSeconds(stopTime);
+
+        PlayerController.speed = 7; // change to not hard coded value later if possible
+        PlayerController.jumpPower = 35;
+    }
     private void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
