@@ -54,7 +54,13 @@ public class RatHealth : MonoBehaviour
         if (Health.GetHearts() > 1)
             anim.SetTrigger("Ouch");
         else if (Health.GetHearts() == 1)
+        {
+
+            rb.bodyType = RigidbodyType2D.Static;
             anim.SetTrigger("Death");
+            anim.SetBool("isDead", true);
+        }
+            
         Health.RemoveHeart();
         audiomanager.instance.PlaySFX("damaged");
     }
