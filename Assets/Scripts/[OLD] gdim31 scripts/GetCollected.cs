@@ -14,6 +14,7 @@ public class GetCollected : MonoBehaviour
             Destroy(gameObject);
             numPizzas += 1;
             Debug.Log("Number of Pizzas: " + numPizzas);
+            Health.AddHeart();
         }
     }
 }

@@ -66,6 +66,10 @@ public class Health : MonoBehaviour
         sHearts -= 1;
     }
 
+    public static void AddHeart()
+    {
+        sHearts += 1;
+    }
     public static int GetHearts()
     {
         return sHearts;
