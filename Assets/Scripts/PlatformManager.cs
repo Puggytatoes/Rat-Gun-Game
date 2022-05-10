@@ -14,7 +14,7 @@ public class PlatformManager : MonoBehaviour
         if (Instance == null)
             Instance = this;
         else if (Instance != this)
-            Destroy(gameObject);
+            gameObject.SetActive(false);
 
     }
     // Start is called before the first frame update
