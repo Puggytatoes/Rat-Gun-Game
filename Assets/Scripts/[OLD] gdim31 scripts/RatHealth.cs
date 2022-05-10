@@ -11,7 +11,7 @@ public class RatHealth : MonoBehaviour
 
     private bool isInvincible;
     private float invincibleTimer;
-    public float timeInvincible = 1f;
+    public float timeInvincible = 0.5f;
 
     void Start()
     {
@@ -29,12 +29,11 @@ public class RatHealth : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Hurt();
-            
         }
 
         if (collision.gameObject.CompareTag("hazard"))

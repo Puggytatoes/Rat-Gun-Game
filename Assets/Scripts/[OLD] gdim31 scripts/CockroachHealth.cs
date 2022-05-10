@@ -31,12 +31,12 @@ public class CockroachHealth : MonoBehaviour
         currentHealth -= damage;
 
         animator.SetTrigger("Hurt");
-
+        Knockback();
         if (currentHealth <= 0)
         {
             Dead();
             numCockroaches += 1;
-            
+        
         }
     }
 
