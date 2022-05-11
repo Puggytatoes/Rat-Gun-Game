@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BetterJump : MonoBehaviour
+{
+    public float fallMultiplier = 10f;
+    public float lowJumpMultiplier = 2f;
+
+    Rigidbody2D rb;
+
+    public void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    public void Update()
+    {
+        
+        if (rb.velocity.y < 0)
+        {
+            Debug.Log("BRO COME ON PLEASE");
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+        else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
+        {
+            Debug.Log("GAH");
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
+    }
+    
+}

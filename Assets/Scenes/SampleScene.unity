@@ -5915,12 +5915,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7bf0e334afeae44087921938e741cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scratch: {fileID: 8300000, guid: c96cce221f6e11b44a6944b37b6780ea, type: 3}
+  scratch: {fileID: 8300000, guid: cb93b7edee75c6c48b5f69f0bb37b0cb, type: 3}
   damaged: {fileID: 8300000, guid: b47308d4c0b61534ea9f105eecb49e77, type: 3}
   walk: {fileID: 8300000, guid: 77078f2d5e8518d488eebfaf1afc3ac9, type: 3}
   sewers: {fileID: 8300000, guid: fdb1baae12c5cfe4fa686fc1b68cd29d, type: 3}
   roachdie: {fileID: 8300000, guid: 5dede655838e0da4ea5ae78c23a89fca, type: 3}
-  ratjump: {fileID: 8300000, guid: cb93b7edee75c6c48b5f69f0bb37b0cb, type: 3}
+  ratjump: {fileID: 8300000, guid: 9c8b46cfd365d414ebc475bcf5e81ad9, type: 3}
   soundobject: {fileID: 2340944034255258259, guid: 2cc2b1c2b011c9d4c9c48aef9f1ba512, type: 3}
 --- !u!1 &1304895597
 GameObject:

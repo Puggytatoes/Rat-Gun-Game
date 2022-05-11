@@ -34,7 +34,7 @@ public class RatScratch : MonoBehaviour
         ratDir = (int)(gameObject.transform.localScale.x / 3);
         if (Time.time >= nextScratchTime)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0) && animator.GetBool("canScratch"))
+            if (Input.GetButtonDown("Fire2") && animator.GetBool("canScratch"))
             {
                 if (PlayerController.GetCeilingCheck() == false)
                 {

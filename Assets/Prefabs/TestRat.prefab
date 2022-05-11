@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 3350546007210928183}
   - component: {fileID: 3350546007210928184}
   - component: {fileID: 1848028960}
+  - component: {fileID: 1031837460}
   m_Layer: 0
   m_Name: TestRat
   m_TagString: Player
@@ -199,8 +200,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 2
-  m_AngularDrag: 10
-  m_GravityScale: 10
+  m_AngularDrag: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -225,8 +226,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
-  speed: 7
-  jumpPower: 40
   groundCheckRadius: 0.4
   ceilingCheckRadius: 0.38
   crouchSpeedModifier: 0.35
@@ -352,6 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeInvincible: 0.75
+  stopTime: 0.75
 --- !u!114 &3350546007210928184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,3 +469,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1031837460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7636609992046159373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31400b55aac8a9418a504b433db0fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallMultiplier: 10
+  lowJumpMultiplier: 2
