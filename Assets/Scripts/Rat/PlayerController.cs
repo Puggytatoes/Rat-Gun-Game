@@ -15,6 +15,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float groundCheckRadius = 0.2f;
     [SerializeField] float ceilingCheckRadius = 0.4f;
 
+    [SerializeField]  private float coyoteTime = 0.08f;
+    private float coyoteTimeCounter;
+
+    [SerializeField] private float jumpBufferTime = 0.08f;
+    private float jumpBufferCounter;
+
     float horizontalValue;
     [SerializeField] float crouchSpeedModifier = 0.35f;
     [SerializeField] bool isGrounded;
@@ -42,15 +48,34 @@ public class PlayerController : MonoBehaviour
  
     void Update()
     {
-        
-        if (Input.GetButtonDown("Jump") && isJumping == false)
+        if (isGrounded)
         {
+            coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+        
+        if (Input.GetButtonDown("Jump"))
+        {
+            jumpBufferCounter = jumpBufferTime;
+        }
+        else
+        {
+            jumpBufferCounter -= Time.deltaTime;
+        }
+
+        if (jumpBufferCounter > 0 && isJumping == false)
+        {
+            jumpBufferCounter = jumpBufferTime;
             Jump();
         }
         else if (Input.GetButtonUp("Jump") && isJumping)
         {
             isJumping = false;
             animator.SetBool("isJumping", false);
+            coyoteTimeCounter = 0f;
         }
 
         //If we press Crouch button enable crouch 
@@ -73,7 +98,7 @@ public class PlayerController : MonoBehaviour
     void Jump()
     {
         animator.SetBool("isJumping", true);
-        if (isGrounded && underCeiling == false)
+        if (coyoteTimeCounter > 0f && underCeiling == false)
         {
             audiomanager.instance.PlaySFX("ratjump");
             rb.velocity = Vector2.up * jumpPower;
