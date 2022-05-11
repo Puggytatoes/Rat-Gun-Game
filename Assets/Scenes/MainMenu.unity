@@ -873,7 +873,8 @@ MonoBehaviour:
   m_Levels:
   - MainMenu
   - Prologue
-  - SampleScene
+  - TestScene2
+  - Game Over
   m_TitleSceneName: MainMenu
 --- !u!4 &1623940457
 Transform:

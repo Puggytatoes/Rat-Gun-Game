@@ -23,8 +23,7 @@ public class PlayerPos : MonoBehaviour
 
         if (hl.health <= 0)
         {
-            gm.lastCheckPointPos = gm.startingPos;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("Game Over");
         }
     }
 }
