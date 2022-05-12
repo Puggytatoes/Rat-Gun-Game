@@ -61,7 +61,6 @@ public class RatHealth : MonoBehaviour
 
         else if (Health.GetHearts() == 1)
         {
-
             rb.bodyType = RigidbodyType2D.Static;
             anim.SetTrigger("Death");
             anim.SetBool("isDead", true);
