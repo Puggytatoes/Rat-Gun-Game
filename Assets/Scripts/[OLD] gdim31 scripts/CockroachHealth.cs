@@ -66,7 +66,7 @@ public class CockroachHealth : MonoBehaviour
     public void Knockback()
     {
         int dirCheck = RatScratch.ratDir;
-        Debug.Log(dirCheck);
+        //Debug.Log(dirCheck);
         //enemyBody.isKinematic = false;
         Vector2 difference = enemyBody.transform.position + transform.position;
         difference = difference.normalized * 25 * -(dirCheck);  //  if the cockroach is past a point where the player's local pos is greater than 0, flip kb

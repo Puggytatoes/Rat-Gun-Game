@@ -56,6 +56,7 @@ public class RatHealth : MonoBehaviour
         if (Health.GetHearts() > 1)
         {
             anim.SetTrigger("Ouch");
+            Wait();
         }
 
         else if (Health.GetHearts() == 1)
@@ -75,6 +76,11 @@ public class RatHealth : MonoBehaviour
         StartCoroutine(FreezeRoutine());
     }
 
+    public void Wait()
+    {
+        StartCoroutine(WaitCoroutine());
+    }
+
     private IEnumerator FreezeRoutine()
     {
         PlayerController.speed = 0;
@@ -85,6 +91,14 @@ public class RatHealth : MonoBehaviour
         PlayerController.speed = 7; // change to not hard coded value later if possible
         PlayerController.jumpPower = 35;
     }
+
+    private IEnumerator WaitCoroutine()
+    {
+        anim.SetBool("canScratch", false);
+        yield return new WaitForSeconds(.5f);
+        anim.SetBool("canScratch", true);
+    }
+
     private void RestartLevel()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
