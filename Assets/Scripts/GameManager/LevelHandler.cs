@@ -17,11 +17,12 @@ public class LevelHandler : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag =="Player")
+        if (collision.tag == "Player")
         {
+            yield return new WaitForSeconds(2);
             SceneManager.LoadScene("Cutscene");
-        }
+        }   
     }
 }
