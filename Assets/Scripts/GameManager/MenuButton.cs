@@ -22,4 +22,9 @@ public class MenuButton : MonoBehaviour
     {
         Application.Quit(); //on clicking the assigned button, exit out of the game
     }
+
+    public void OnReplayGame()
+    {
+        GameManager.Replay();
+    }
 }

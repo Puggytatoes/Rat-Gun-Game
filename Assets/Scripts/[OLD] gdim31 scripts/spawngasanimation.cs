@@ -14,7 +14,7 @@ public class spawngasanimation : MonoBehaviour
     IEnumerator gas()
     {
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.5f);
         Instantiate(Gasani, spawnPoint.position, spawnPoint.rotation);
 
 

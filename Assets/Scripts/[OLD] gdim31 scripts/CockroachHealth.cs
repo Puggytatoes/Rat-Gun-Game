@@ -31,12 +31,12 @@ public class CockroachHealth : MonoBehaviour
         currentHealth -= damage;
 
         animator.SetTrigger("Hurt");
-
+        Knockback();
         if (currentHealth <= 0)
         {
             Dead();
             numCockroaches += 1;
-            
+        
         }
     }
 
@@ -66,9 +66,14 @@ public class CockroachHealth : MonoBehaviour
     public void Knockback()
     {
         int dirCheck = RatScratch.ratDir;
-        enemyBody.isKinematic = false;
+        //Debug.Log(dirCheck);
+        //enemyBody.isKinematic = false;
         Vector2 difference = enemyBody.transform.position + transform.position;
-        difference = difference.normalized * 25 * -(dirCheck);
+        difference = difference.normalized * 25 * -(dirCheck);  //  if the cockroach is past a point where the player's local pos is greater than 0, flip kb
+        if (enemyBody.position.x > -3)
+        {
+            difference *= -1;
+        }
         enemyBody.AddForce(difference, ForceMode2D.Impulse);
         StartCoroutine(KnockbackCo(enemyBody));
     }
@@ -79,9 +84,20 @@ public class CockroachHealth : MonoBehaviour
         {
             yield return new WaitForSeconds(knockbackTime);
             enemyBody.velocity = Vector2.zero;
-            enemyBody.isKinematic = true;
+            //enemyBody.isKinematic = true;
             //EnemyMovement.speed = 0;
         }
     }
-    
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("hazard"))
+        {
+            Debug.Log("omae wa mo");
+            currentHealth = 0;
+            Dead();
+            numCockroaches += 1;
+        }
+    }
+
 }

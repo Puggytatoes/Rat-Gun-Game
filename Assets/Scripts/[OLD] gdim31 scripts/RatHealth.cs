@@ -12,6 +12,7 @@ public class RatHealth : MonoBehaviour
     private bool isInvincible;
     private float invincibleTimer;
     public float timeInvincible = 1f;
+    public float stopTime = 0.75f;
 
     void Start()
     {
@@ -29,12 +30,11 @@ public class RatHealth : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Hurt();
-            
         }
 
         if (collision.gameObject.CompareTag("hazard"))
@@ -42,6 +42,7 @@ public class RatHealth : MonoBehaviour
             gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
             transform.position = gm.lastCheckPointPos;
             Hurt();
+            Freeze();
         }
     }
 
@@ -53,15 +54,47 @@ public class RatHealth : MonoBehaviour
         isInvincible = true;
         invincibleTimer = timeInvincible;
         if (Health.GetHearts() > 1)
+        {
             anim.SetTrigger("Ouch");
-        else if (Health.GetHearts() == 1)
+            Wait();
+        }
+
+        else if (Health.GetHearts() == 0)
+        {
+            rb.bodyType = RigidbodyType2D.Static;
             anim.SetTrigger("Death");
+            anim.SetBool("isDead", true);
+        }
+            
         Health.RemoveHeart();
         audiomanager.instance.PlaySFX("damaged");
     }
 
-    private void RestartLevel()
+    public void Freeze()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        StartCoroutine(FreezeRoutine());
+    }
+
+    public void Wait()
+    {
+        StartCoroutine(WaitCoroutine());
+    }
+
+    private IEnumerator FreezeRoutine()
+    {
+        PlayerController.speed = 0;
+        PlayerController.jumpPower = 0;
+
+        yield return new WaitForSeconds(stopTime);
+
+        PlayerController.speed = 7; // change to not hard coded value later if possible
+        PlayerController.jumpPower = 35;
+    }
+
+    private IEnumerator WaitCoroutine()
+    {
+        anim.SetBool("canScratch", false);
+        yield return new WaitForSeconds(.5f);
+        anim.SetBool("canScratch", true);
     }
 }

@@ -57,6 +57,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(_instance.m_Levels[0]); //loads the title scene 
     }
 
+    public static void Replay()    //returning to the title
+    {
+        SceneManager.LoadScene(_instance.m_Levels[2]); //loads the title scene 
+    }
+
     public static void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); //restart the currently activated scene

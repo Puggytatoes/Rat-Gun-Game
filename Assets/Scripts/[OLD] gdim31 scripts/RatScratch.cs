@@ -18,8 +18,8 @@ public class RatScratch : MonoBehaviour
     [SerializeField]
     private float scratchRate;
     private float nextScratchTime = 0f;
-    private int leftOrRight = 0;
-    private float ratDirection = 0;
+    //private int leftOrRight = 0;
+    //private float ratDirection = 0;
     public static int ratDir = 0;
 
     AudioSource rataudio;
@@ -31,17 +31,10 @@ public class RatScratch : MonoBehaviour
 
     void Update()
     {
-         ratDirection = rb.transform.rotation.y;
-
-        if (ratDirection == 1)
-            leftOrRight = -1;
-        else if (ratDirection == 0)
-            leftOrRight = 1;
-
-        ratDir = GetRatDirection(leftOrRight);
+        ratDir = (int)(gameObject.transform.localScale.x / 3);
         if (Time.time >= nextScratchTime)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0) && animator.GetBool("canScratch"))
+            if (Input.GetButtonDown("Fire2") && animator.GetBool("canScratch"))
             {
                 if (PlayerController.GetCeilingCheck() == false)
                 {
@@ -70,7 +63,7 @@ public class RatScratch : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<CockroachHealth>().TakeDamage(numDamage);
-            //enemy.GetComponent<CockroachHealth>().Knockback();
+            enemy.GetComponent<CockroachHealth>().Knockback();
         }
     }
     void OnDrawGizmosSelected()

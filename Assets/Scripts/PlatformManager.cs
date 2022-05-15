@@ -9,12 +9,15 @@ public class PlatformManager : MonoBehaviour
     [SerializeField]
     GameObject platformPrefab;
 
+    [SerializeField]
+    float seconds;
+
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
         else if (Instance != this)
-            Destroy(gameObject);
+            gameObject.SetActive(false);
 
     }
     // Start is called before the first frame update
@@ -27,7 +30,7 @@ public class PlatformManager : MonoBehaviour
 
     IEnumerator SpawnPlatform(Vector2 spawnPosition)
     {
-        yield return new WaitForSeconds (2f);
+        yield return new WaitForSeconds (seconds);
         Instantiate(platformPrefab, spawnPosition, platformPrefab.transform.rotation);
     }
 

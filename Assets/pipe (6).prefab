@@ -112,10 +112,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7288514235367530342}
   - component: {fileID: 7288514235367530343}
+  - component: {fileID: 2544555977357672985}
   - component: {fileID: 7288514235367530337}
   - component: {fileID: 1939737483}
   - component: {fileID: 1939737480}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pipe (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +132,7 @@ Transform:
   m_GameObject: {fileID: 7288514235367530341}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 112.81, y: 13.19, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 5.897117, y: 2.9013276, z: 1}
   m_Children:
   - {fileID: 7288514235413674820}
   - {fileID: 1857483159}
@@ -189,6 +190,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2544555977357672985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288514235367530341}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564f486e8cb01b94990f74fc6e8b388b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gas: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!114 &7288514235367530337
 MonoBehaviour:
   m_ObjectHideFlags: 0

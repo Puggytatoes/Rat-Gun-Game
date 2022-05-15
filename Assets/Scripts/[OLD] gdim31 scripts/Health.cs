@@ -20,13 +20,15 @@ public class Health : MonoBehaviour
 
     void Update()
     {
+        
         health = sHearts;
+        /*
         if (health == 0)
         {
-            StartCoroutine(WaitCoroutine());
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             sHearts = 5;
-        }
-
+        }*/
+        
         if (health > numOfHearts)
         {
             health = numOfHearts;
@@ -66,6 +68,10 @@ public class Health : MonoBehaviour
         sHearts -= 1;
     }
 
+    public static void AddHeart()
+    {
+        sHearts += 1;
+    }
     public static int GetHearts()
     {
         return sHearts;

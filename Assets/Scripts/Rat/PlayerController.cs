@@ -10,10 +10,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform ceilingCheckCollider;
     [SerializeField] LayerMask groundLayer;
 
-    [SerializeField] float speed = 5;
-    [SerializeField] float jumpPower = 30;
+    public static float speed = 7;
+    public static float jumpPower = 35;
     [SerializeField] float groundCheckRadius = 0.2f;
     [SerializeField] float ceilingCheckRadius = 0.4f;
+
+    [SerializeField]  private float coyoteTime = 0.08f;
+    private float coyoteTimeCounter;
+
+    [SerializeField] private float jumpBufferTime = 0.08f;
+    private float jumpBufferCounter;
 
     float horizontalValue;
     [SerializeField] float crouchSpeedModifier = 0.35f;
@@ -36,20 +42,40 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         rataudio = GetComponent<AudioSource>();
-      
-
+        speed = 7;
+        jumpPower = 35;
     }
  
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && isJumping == false)
+        if (isGrounded)
         {
+            coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+        
+        if (Input.GetButtonDown("Jump"))
+        {
+            jumpBufferCounter = jumpBufferTime;
+        }
+        else
+        {
+            jumpBufferCounter -= Time.deltaTime;
+        }
+
+        if (jumpBufferCounter > 0 && isJumping == false)
+        {
+            jumpBufferCounter = jumpBufferTime;
             Jump();
         }
         else if (Input.GetButtonUp("Jump") && isJumping)
         {
             isJumping = false;
             animator.SetBool("isJumping", false);
+            coyoteTimeCounter = 0f;
         }
 
         //If we press Crouch button enable crouch 
@@ -72,7 +98,7 @@ public class PlayerController : MonoBehaviour
     void Jump()
     {
         animator.SetBool("isJumping", true);
-        if (isGrounded && underCeiling == false)
+        if (coyoteTimeCounter > 0f && underCeiling == false)
         {
             audiomanager.instance.PlaySFX("ratjump");
             rb.velocity = Vector2.up * jumpPower;
@@ -102,7 +128,6 @@ public class PlayerController : MonoBehaviour
 
         if (isMoving && isGrounded)
         {
-            Debug.Log(rb.velocity.x);
             if (!rataudio.isPlaying)
             {
                 rataudio.Play();
@@ -114,6 +139,8 @@ public class PlayerController : MonoBehaviour
         }
         
     }
+
+
 
     void GroundCheck()
     {
