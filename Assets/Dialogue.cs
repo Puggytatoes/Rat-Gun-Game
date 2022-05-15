@@ -37,6 +37,7 @@ public class Dialogue : MonoBehaviour
     {
         index = 0;
         StartCoroutine(TypeLine());
+
     }
 
     IEnumerator TypeLine()

@@ -38,7 +38,7 @@ public class Health : MonoBehaviour
         {
             if (i < health)
             {
-                hearts[i].sprite = fullHeart;
+                //hearts[i].sprite = fullHeart;
             }
             else
             {
@@ -46,7 +46,7 @@ public class Health : MonoBehaviour
             }
             if (i < numOfHearts)
             {
-                hearts[i].enabled = true;
+                //hearts[i].enabled = true;
             }
             else
             {

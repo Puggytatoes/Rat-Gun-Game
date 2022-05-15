@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
  
     void Update()
     {
+        
         if (isGrounded)
         {
             coyoteTimeCounter = coyoteTime;
@@ -109,6 +110,13 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (startCutscene.isCutsceneOn == true)
+        {
+            rb.bodyType = RigidbodyType2D.Static;
+            animator.SetFloat("xVelocity", 0);
+            Debug.Log("hi");
+            return;
+        }
         GroundCheck();
         if (isGrounded == false)
             isCrouching = false;
