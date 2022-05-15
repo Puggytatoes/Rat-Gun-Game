@@ -59,7 +59,7 @@ public class RatHealth : MonoBehaviour
             Wait();
         }
 
-        else if (Health.GetHearts() == 1)
+        else if (Health.GetHearts() == 0)
         {
             rb.bodyType = RigidbodyType2D.Static;
             anim.SetTrigger("Death");
@@ -96,11 +96,5 @@ public class RatHealth : MonoBehaviour
         anim.SetBool("canScratch", false);
         yield return new WaitForSeconds(.5f);
         anim.SetBool("canScratch", true);
-    }
-
-    private void RestartLevel()
-    {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene("Game Over");
     }
 }

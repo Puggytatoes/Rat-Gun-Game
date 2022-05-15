@@ -7,6 +7,7 @@ public class PlayerPos : MonoBehaviour
 {
     private GameMaster gm;
     [SerializeField]private Health hl;
+    private Animator anim;
 
     void Start()
     {
@@ -23,7 +24,15 @@ public class PlayerPos : MonoBehaviour
 
         if (hl.health <= 0)
         {
-            SceneManager.LoadScene("Game Over");
+            StartCoroutine(GameoverCoroutine());
+            
+
         }
+    }
+
+    private IEnumerator GameoverCoroutine()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("Game Over");
     }
 }

@@ -20,13 +20,15 @@ public class Health : MonoBehaviour
 
     void Update()
     {
+        
         health = sHearts;
+        /*
         if (health == 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             sHearts = 5;
-        }
-
+        }*/
+        
         if (health > numOfHearts)
         {
             health = numOfHearts;
