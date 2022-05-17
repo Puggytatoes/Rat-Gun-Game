@@ -18,6 +18,13 @@ public class Health : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    private void Start()
+    {
+        sHearts = 5;
+        Debug.Log("health" + health + " and sHearts" + sHearts);
+        health = sHearts;
+    }
+
     void Update()
     {
         
@@ -53,15 +60,6 @@ public class Health : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }
-    }
-
-    IEnumerator WaitCoroutine()
-    {
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
-        Score.totalScore = 0;
-        GetCollected.numPizzas = 0;
-        CockroachHealth.numCockroaches = 0;
     }
     public static void RemoveHeart()
     {

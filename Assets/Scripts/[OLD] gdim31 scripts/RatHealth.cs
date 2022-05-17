@@ -59,8 +59,9 @@ public class RatHealth : MonoBehaviour
             Wait();
         }
 
-        else if (Health.GetHearts() == 0)
+        else if (Health.GetHearts() == 1)
         {
+            Debug.Log("owie");
             rb.bodyType = RigidbodyType2D.Static;
             anim.SetTrigger("Death");
             anim.SetBool("isDead", true);

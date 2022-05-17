@@ -22,7 +22,7 @@ public class PlayerPos : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        if (hl.health <= 0)
+        if (hl.health < 1)
         {
             StartCoroutine(GameoverCoroutine());
             
@@ -32,7 +32,10 @@ public class PlayerPos : MonoBehaviour
 
     private IEnumerator GameoverCoroutine()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(.8f);
+        Score.totalScore = 0;
+        GetCollected.numPizzas = 0;
+        CockroachHealth.numCockroaches = 0;
         SceneManager.LoadScene("Game Over");
     }
 }
