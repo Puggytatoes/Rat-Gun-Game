@@ -30,6 +30,16 @@ public class RatHealth : MonoBehaviour
         }
     }
 
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("hazard"))
+        {
+            //gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+            //transform.position = gm.lastCheckPointPos;
+            Hurt();
+            Freeze();
+        }
+    }
     public void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -37,13 +47,7 @@ public class RatHealth : MonoBehaviour
             Hurt();
         }
 
-        if (collision.gameObject.CompareTag("hazard"))
-        {
-            gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-            transform.position = gm.lastCheckPointPos;
-            Hurt();
-            Freeze();
-        }
+        
     }
 
 
@@ -59,8 +63,9 @@ public class RatHealth : MonoBehaviour
             Wait();
         }
 
-        else if (Health.GetHearts() == 0)
+        else if (Health.GetHearts() == 1)
         {
+            Debug.Log("owie");
             rb.bodyType = RigidbodyType2D.Static;
             anim.SetTrigger("Death");
             anim.SetBool("isDead", true);
