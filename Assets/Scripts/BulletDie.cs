@@ -27,6 +27,11 @@ public class BulletDie : MonoBehaviour
         {
             Die();
         }
+
+        if (collision.transform.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<CockroachHealth>().TakeDamage(40);
+        }
     }
 
     IEnumerator Timer()
