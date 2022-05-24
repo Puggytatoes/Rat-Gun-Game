@@ -114,7 +114,6 @@ public class PlayerController : MonoBehaviour
         {
             rb.bodyType = RigidbodyType2D.Static;
             animator.SetFloat("xVelocity", 0);
-            Debug.Log("hi");
             return;
         }
         GroundCheck();
