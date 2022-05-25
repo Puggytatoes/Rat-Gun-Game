@@ -278,7 +278,6 @@ GameObject:
   - component: {fileID: 1031837460}
   - component: {fileID: 1339742107}
   - component: {fileID: 1339742108}
-  - component: {fileID: 1306624870}
   m_Layer: 0
   m_Name: TestRat
   m_TagString: Player
@@ -685,16 +684,3 @@ MonoBehaviour:
   shootTimer: 0.2
   shootPos: {fileID: 930062386}
   bullet: {fileID: 266948683741825458, guid: 4a1d5638d6a27e14387ab9a54bf09abc, type: 3}
---- !u!114 &1306624870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7636609992046159373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2df9eaf5ed21aac49863a795f854abf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hl: {fileID: 3350546007210928182}
