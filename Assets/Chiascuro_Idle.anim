@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Animation
+  m_Name: Chiascuro_Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -31227031186345968, guid: aa2e92c8ae2c6ec49824bfaa81a8691c, type: 3}
+      value: {fileID: -8136527076319338542, guid: 71eac95c8f03fa54f8f2401002f0fa8e, type: 3}
     - time: 0.25
-      value: {fileID: 1830006000169517071, guid: aa2e92c8ae2c6ec49824bfaa81a8691c, type: 3}
+      value: {fileID: 3912368320092152390, guid: 71eac95c8f03fa54f8f2401002f0fa8e, type: 3}
     - time: 0.5
-      value: {fileID: -4616649107513922341, guid: aa2e92c8ae2c6ec49824bfaa81a8691c, type: 3}
+      value: {fileID: -8124512950643210752, guid: 71eac95c8f03fa54f8f2401002f0fa8e, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,9 +44,9 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -31227031186345968, guid: aa2e92c8ae2c6ec49824bfaa81a8691c, type: 3}
-    - {fileID: 1830006000169517071, guid: aa2e92c8ae2c6ec49824bfaa81a8691c, type: 3}
-    - {fileID: -4616649107513922341, guid: aa2e92c8ae2c6ec49824bfaa81a8691c, type: 3}
+    - {fileID: -8136527076319338542, guid: 71eac95c8f03fa54f8f2401002f0fa8e, type: 3}
+    - {fileID: 3912368320092152390, guid: 71eac95c8f03fa54f8f2401002f0fa8e, type: 3}
+    - {fileID: -8124512950643210752, guid: 71eac95c8f03fa54f8f2401002f0fa8e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

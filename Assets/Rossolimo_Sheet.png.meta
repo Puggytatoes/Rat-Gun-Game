@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 51f5643cb32bf1448ad3c78f1f3e60ae
+guid: aa2e92c8ae2c6ec49824bfaa81a8691c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2352293529851434348
-    second: IMG_0141_0
+      213: -31227031186345968
+    second: Rossolimo_Sheet_0
   - first:
-      213: -3962004965032931746
-    second: IMG_0141_1
+      213: 1830006000169517071
+    second: Rossolimo_Sheet_1
   - first:
-      213: -349876062749708580
-    second: IMG_0141_2
+      213: -4616649107513922341
+    second: Rossolimo_Sheet_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_0141_0
+      name: Rossolimo_Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -108,20 +108,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49a61c16f79fa5fd0800000000000000
-      internalID: -2352293529851434348
+      spriteID: 0107fba3e2f019ff0800000000000000
+      internalID: -31227031186345968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0141_1
+      name: Rossolimo_Sheet_1
       rect:
         serializedVersion: 2
         x: 64
@@ -129,20 +129,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5ec0e4d9712409c0800000000000000
-      internalID: -3962004965032931746
+      spriteID: f0000f8e2cc756910800000000000000
+      internalID: 1830006000169517071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0141_2
+      name: Rossolimo_Sheet_2
       rect:
         serializedVersion: 2
         x: 128
@@ -150,14 +150,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cde246c139df42bf0800000000000000
-      internalID: -349876062749708580
+      spriteID: bdc2206c81e5eefb0800000000000000
+      internalID: -4616649107513922341
       vertices: []
       indices: 
       edges: []
