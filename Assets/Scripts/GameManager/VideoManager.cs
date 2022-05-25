@@ -18,12 +18,12 @@ public class VideoManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("Level2Cutscene");
         }
     }
 
     void AfterVideo(VideoPlayer vp)
     {
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("Level2Cutscene");
     }
 }
