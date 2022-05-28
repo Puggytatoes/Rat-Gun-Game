@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShoot : MonoBehaviour
+public class PlayerShoot : PlayerController
 {
     public float shootSpeed, shootTimer;
 
@@ -22,6 +22,19 @@ public class PlayerShoot : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && !isShooting)
         {
             StartCoroutine(Shoot());
+        }
+
+        if (Input.GetButton("Crouch"))
+        {
+            Vector2 pos = shootPos.position;
+            pos.y = -3.8f;
+            shootPos.position = pos;
+        }
+        else if (Input.GetButtonUp("Crouch"))
+        {
+            Vector2 pos = shootPos.position;
+            pos.y = -3f;
+            shootPos.position = pos;
         }
     }
 

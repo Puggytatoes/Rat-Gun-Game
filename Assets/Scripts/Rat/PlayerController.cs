@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     float horizontalValue;
     [SerializeField] float crouchSpeedModifier = 0.35f;
-    [SerializeField] bool isGrounded;
+    [SerializeField] public bool isGrounded;
     public static bool underCeiling;
 
     public bool isCrouching;
