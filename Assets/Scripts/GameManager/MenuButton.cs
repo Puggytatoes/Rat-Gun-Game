@@ -13,6 +13,17 @@ public class MenuButton : MonoBehaviour
 
     }
 
+    public void OnClickRestart1()
+    {
+        GameManager.Restart1();
+    }
+
+    public void OnClickRestart2()
+    {
+        GameManager.Restart2();
+    }
+
+
     public void OnMainMenu()
     {
         GameManager.QuitToTitle(); //on clicking the assigned button, load a new game

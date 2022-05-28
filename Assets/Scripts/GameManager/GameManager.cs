@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string m_TitleSceneName;
 
     private static GameManager _instance;  //instantiate GameStateManger
+    private static PlayerPos PlayerPos;
 
     private void Awake()    //execute this function when the scene is called
     {
@@ -65,5 +66,15 @@ public class GameManager : MonoBehaviour
     public static void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); //restart the currently activated scene
+    }
+
+    public static void Restart1()
+    {
+        SceneManager.LoadScene("TestScene2");
+    }
+
+    public static void Restart2()
+    {
+        SceneManager.LoadScene("Level2");
     }
 }
