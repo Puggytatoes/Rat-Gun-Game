@@ -9,9 +9,6 @@ public class Health : MonoBehaviour
     [SerializeField]
     public int health;
 
-    [SerializeField]
-    private int numOfHearts;
-
     private static int sHearts = 5;
 
     public Image[] hearts;
@@ -29,35 +26,16 @@ public class Health : MonoBehaviour
     {
         
         health = sHearts;
-        /*
-        if (health == 0)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            sHearts = 5;
-        }*/
         
-        if (health > numOfHearts)
-        {
-            health = numOfHearts;
-        }
-
         for (int i = 0; i < hearts.Length; i++)
         {
             if (i < health)
             {
-                //hearts[i].sprite = fullHeart;
+                hearts[i].sprite = fullHeart;
             }
             else
             {
                 hearts[i].sprite = emptyHeart;
-            }
-            if (i < numOfHearts)
-            {
-                //hearts[i].enabled = true;
-            }
-            else
-            {
-                hearts[i].enabled = false;
             }
         }
     }
