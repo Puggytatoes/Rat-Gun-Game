@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShoot : PlayerController
+public class PlayerShoot : MonoBehaviour
 {
     public float shootSpeed, shootTimer;
 
