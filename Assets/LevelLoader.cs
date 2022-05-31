@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+/*
 public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
@@ -15,7 +15,7 @@ public class LevelLoader : MonoBehaviour
             LoadNextLevel();
         }
     }
-
+     
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
@@ -28,3 +28,4 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(levelIndex);
     }
 }
+*/

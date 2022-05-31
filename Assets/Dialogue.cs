@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
+
+    public Animator transition;
+
+    public float transitionTime = 1f;
+
 
     private int index;
     // Start is called before the first frame update
@@ -47,6 +53,7 @@ public class Dialogue : MonoBehaviour
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+        
     }
 
     void NextLine()
@@ -56,10 +63,21 @@ public class Dialogue : MonoBehaviour
             index++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
+            Debug.Log("In Coroutine");
         }
         else
         {
             gameObject.SetActive(false);
+            SceneManager.LoadScene(7);
+            Debug.Log("sinatraa");
         }
+        
     }
+    
+    
+
+    
+       
+    
+
 }

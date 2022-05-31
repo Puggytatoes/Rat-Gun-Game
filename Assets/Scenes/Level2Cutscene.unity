@@ -334,8 +334,9 @@ MonoBehaviour:
     along the way. Bring back one of his claws as a token of our friendship, and
     your initiation into the mafia will be complete.  '
   - 'Chiascuro: And remember. We''ll be watching you closely.'
-  - Press space to continue
   textSpeed: 0.02
+  transition: {fileID: 0}
+  transitionTime: 1
 --- !u!1 &513488542
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,6 +925,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2269462944225570074, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350546007210928182, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7636609992046159373, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
