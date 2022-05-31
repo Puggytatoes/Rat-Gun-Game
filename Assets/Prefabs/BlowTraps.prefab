@@ -4920,7 +4920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f03afb78be73c4fa2c4d4799d50fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PushingForce: 30
+  m_PushingForce: 100
   m_Rb: {fileID: 0}
 --- !u!61 &7186761877783952560
 BoxCollider2D:
