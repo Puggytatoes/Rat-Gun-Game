@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunPosi : MonoBehaviour
+public class GunPosi : PlayerController
 {
     //float liftSpeed = 10;
     //GameObject target;
@@ -16,7 +16,6 @@ public class GunPosi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
         if (Input.GetButton("Crouch"))
         {
             //transform.position = Vector2.Lerp(transform.position, target2.transform.position, Time.deltaTime * liftSpeed);
@@ -31,6 +30,5 @@ public class GunPosi : MonoBehaviour
             pos.y = -3f;
             transform.position = pos;
         }
-        */
     }
 }
