@@ -68,7 +68,7 @@ public class Dialogue : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene("Level2");
             Debug.Log("sinatraa");
         }
         
