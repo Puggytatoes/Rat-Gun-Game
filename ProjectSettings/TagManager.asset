@@ -48,9 +48,6 @@ TagManager:
   - name: Background1
     uniqueID: 163066419
     locked: 0
-  - name: Uninteractable object
-    uniqueID: 2621770191
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
