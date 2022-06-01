@@ -21,7 +21,7 @@ public class LevelHandler2 : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            SceneManager.LoadScene(9);
+            SceneManager.LoadScene("Cutscene 2");
         }
     }
 }
