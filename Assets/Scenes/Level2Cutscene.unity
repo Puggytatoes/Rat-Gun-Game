@@ -883,6 +883,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 494514032, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1317857549}
+    - target: {fileID: 1339742108, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2269462944225570074, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -931,12 +939,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3350546007210928183, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7636609992046159373, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
       propertyPath: m_Name
       value: TestRat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+--- !u!50 &1317857549 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 494514034, guid: 5819d8ec778ec7d48aea7b6011ef2a9b, type: 3}
+  m_PrefabInstance: {fileID: 1317857548}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1491017488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,6 +1419,10 @@ PrefabInstance:
     - target: {fileID: 6474825585678994553, guid: 6b11cf69d28c46f448c7d98fc6636932, type: 3}
       propertyPath: m_Name
       value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 6474825585678994553, guid: 6b11cf69d28c46f448c7d98fc6636932, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b11cf69d28c46f448c7d98fc6636932, type: 3}

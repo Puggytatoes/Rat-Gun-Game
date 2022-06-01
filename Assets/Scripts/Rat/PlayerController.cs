@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 public class PlayerController : MonoBehaviour
 {
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     [SerializeField] Collider2D standingCollider, crouchingCollider;
     [SerializeField] Transform groundCheckCollider;
     [SerializeField] Transform ceilingCheckCollider;
@@ -110,12 +110,6 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (startCutscene.isCutsceneOn == true)
-        {
-            rb.bodyType = RigidbodyType2D.Static;
-            animator.SetFloat("xVelocity", 0);
-            return;
-        }
         GroundCheck();
         if (isGrounded == false)
             isCrouching = false;
