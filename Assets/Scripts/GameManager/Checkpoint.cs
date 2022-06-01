@@ -15,6 +15,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Debug.Log("beans");
             gm.lastCheckPointPos = transform.position;
         }
     }
