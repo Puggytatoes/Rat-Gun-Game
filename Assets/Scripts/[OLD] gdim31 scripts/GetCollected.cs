@@ -11,6 +11,7 @@ public class GetCollected : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            audiomanager.instance.PlaySFX("yummy");
             Destroy(gameObject);
             numPizzas += 1;
             Debug.Log("Number of Pizzas: " + numPizzas);

@@ -17,6 +17,8 @@ public class audiomanager : MonoBehaviour
     public AudioClip sewers;
     public AudioClip roachdie;
     public AudioClip ratjump;
+    public AudioClip yummy;
+    public AudioClip startgunshot;
 
     public GameObject soundobject;
 
@@ -40,6 +42,12 @@ public class audiomanager : MonoBehaviour
                 break;
             case "ratjump":
                 SoundObjectCreation(ratjump);
+                break;
+            case "yummy":
+                SoundObjectCreation(yummy);
+                break;
+            case "startgunshot":
+                SoundObjectCreation(startgunshot);
                 break;
         }
     }

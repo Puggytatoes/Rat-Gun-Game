@@ -18,6 +18,7 @@ public class RatHealth : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        audiomanager.instance.PlaySFX("startgunshot");
     }
 
     void Update()
