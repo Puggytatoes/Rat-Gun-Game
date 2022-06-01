@@ -2848,7 +2848,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -51739,6 +51739,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 617405708, guid: 39ab43c910a8f204fb18ed84eee8f036, type: 3}
+      propertyPath: yummy
+      value: 
+      objectReference: {fileID: 8300000, guid: f4f7bc47eb3d1934198275dd1a9a0fff, type: 3}
     - target: {fileID: 4839447374102830044, guid: 39ab43c910a8f204fb18ed84eee8f036, type: 3}
       propertyPath: m_RootOrder
       value: 4
