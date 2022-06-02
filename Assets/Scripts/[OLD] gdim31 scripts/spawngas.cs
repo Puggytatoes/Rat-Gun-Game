@@ -19,7 +19,7 @@ public class spawngas : MonoBehaviour
         yes = true;
         
     }
-    void Update()
+    void FixedUpdate()
     {
         
         if (yes == true)
