@@ -20,7 +20,6 @@ public class spawngas : MonoBehaviour
         yes = false;
         yield return new WaitForSeconds(1.05f);
         Instantiate(Gas, spawnPoint.position, spawnPoint.rotation);
-        OnDrawGizmos();
         yield return new WaitForSeconds(1.45f);
         yes = true;
         
