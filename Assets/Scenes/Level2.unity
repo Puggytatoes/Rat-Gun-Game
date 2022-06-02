@@ -510,7 +510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 266948683741825458, guid: 4a1d5638d6a27e14387ab9a54bf09abc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4661306772781743061, guid: 4a1d5638d6a27e14387ab9a54bf09abc, type: 3}
       propertyPath: dieTime
@@ -55197,6 +55197,10 @@ PrefabInstance:
       propertyPath: ratjump
       value: 
       objectReference: {fileID: 8300000, guid: 8a64e16b00f9160438a56dc6ebbbab7a, type: 3}
+    - target: {fileID: 617405708, guid: 39ab43c910a8f204fb18ed84eee8f036, type: 3}
+      propertyPath: regulargunshot
+      value: 
+      objectReference: {fileID: 8300000, guid: a50ccfe1a4116d4489aab845a833a61d, type: 3}
     - target: {fileID: 4839447374102830044, guid: 39ab43c910a8f204fb18ed84eee8f036, type: 3}
       propertyPath: m_RootOrder
       value: 4
