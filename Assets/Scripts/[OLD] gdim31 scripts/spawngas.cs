@@ -10,11 +10,17 @@ public class spawngas : MonoBehaviour
 
     public Transform spawnPoint;
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawCube(transform.position, Vector3.one);
+    }
+
     IEnumerator gas()
     {
         yes = false;
         yield return new WaitForSeconds(1.05f);
         Instantiate(Gas, spawnPoint.position, spawnPoint.rotation);
+        OnDrawGizmos();
         yield return new WaitForSeconds(1.45f);
         yes = true;
         
