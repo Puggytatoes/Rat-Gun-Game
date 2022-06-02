@@ -19,6 +19,7 @@ public class audiomanager : MonoBehaviour
     public AudioClip ratjump;
     public AudioClip yummy;
     public AudioClip startgunshot;
+    public AudioClip regulargunshot;
 
     public GameObject soundobject;
 
@@ -48,6 +49,9 @@ public class audiomanager : MonoBehaviour
                 break;
             case "startgunshot":
                 SoundObjectCreation(startgunshot);
+                break;
+            case "regulargunshot":
+                SoundObjectCreation(regulargunshot);
                 break;
         }
     }

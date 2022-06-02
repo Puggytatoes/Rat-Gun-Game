@@ -21,6 +21,7 @@ public class PlayerShoot : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && !isShooting)
         {
+            audiomanager.instance.PlaySFX("regulargunshot");
             StartCoroutine(Shoot());
         }
 
@@ -40,6 +41,7 @@ public class PlayerShoot : MonoBehaviour
 
     IEnumerator Shoot()
     {
+        
         int direction()
         {
             if(transform.localScale.x < 0f)
