@@ -26,9 +26,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public bool isGrounded;
     public static bool underCeiling;
 
-    public bool isCrouching;
+    public static bool isCrouching;
     bool isJumping = false;
-    bool facingRight = true;
+    public static bool facingRight = true;
 
     public Animator animator;
 
@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour
     bool isMoving = false;
     public AudioSource rataudio;
 
+    public static float currentX;
+    public static float currentY;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -48,6 +50,8 @@ public class PlayerController : MonoBehaviour
  
     void Update()
     {
+        currentX = gameObject.transform.position.x;
+        currentY = gameObject.transform.position.y;
         
         if (isGrounded)
         {
